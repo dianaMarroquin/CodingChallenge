@@ -2,11 +2,9 @@ package org.example;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 @RestController
@@ -15,7 +13,7 @@ import java.util.List;
 public class CalendarController {
 
     @GetMapping(path = "/Get", consumes = "application/json", produces = "application/json")
-    public List<Availability> Post (@RequestBody Calendars ob) {
+    public List<Availability> getAvailability (@RequestBody Calendars ob) {
         Integer getLength = ob.calendars.get(0).calendar.length;
         List<Availability> newResponse = new ArrayList<Availability>();
         for(Integer x = 0; x< getLength; x++)

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Calendars {
     @JsonProperty("calendars")
-    ArrayList<Calendar> calendars ;
+    public ArrayList<Calendar> calendars ;
 
     public Calendars(String [] calendars){
         ArrayList<Calendar> newCalendars;
